@@ -1,0 +1,32 @@
+<div class="container">
+  <h1>POST QUOTES</h1>
+  <p>Welcome to Quotes page, where you post your prefered quote to be Upvoted(liked) or downvoted(disliked) by the viewers</p>
+  <hr>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div *ngFor='let quote of quotes;let i = index'>
+        <div>
+          <h6 appHighlight *ngIf="HighestUpvote()===quote.like && quote.like>0">{{quote.content}}</h6>
+          <h6 *ngIf="HighestUpvote()!==quote.like || quote.like===0">{{quote.content}}</h6>
+          <button (click)='toggleDetails(i)' class="btn btn-primary">Details</button>
+        </div>
+        <div *ngIf='quote.showDescription'>
+          <app-quote-details  [quote]='quote' (isRead) = 'deleteQuote($event,i)'></app-quote-details>
+        </div>
+        <!-- <div>
+          <p appHighlight *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0">{{quote.content}}</p>
+          <p  *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">{{quote.content}}</p>
+          <app-quote-details [quote]="quote" ></app-quote-details>
+        </div> -->
+
+
+      </div>
+    </div>
+    <div class="col-md-6">
+      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    </div>
+  </div>
+</div>
+<hr>
+<footer>Copyright &#169; 2020 Claudine Mahoro</footer>

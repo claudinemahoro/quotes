@@ -1,0 +1,19 @@
+<p>Author:
+  {{quote.uploadedBy}}
+</p>
+<!-- <p>Author:
+  {{quote.author|uppercase}}
+</p> -->
+<p>Uploaded on:
+  {{quote.uploadDate|daysCount}}
+</p>
+<p>Upvotes:
+  {{quote.like}}
+</p>
+<p>Downvotes:
+  {{quote.unlike}}
+</p>
+<button (click)= 'upvote()'  class="btn btn-primary" id="like">{{quote.like}} Upvote</button>&nbsp;
+<button (click)= 'downvote()' class="btn btn-primary" id="warning">{{quote.unlike}} Downvote </button>&nbsp;
+<button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button><br><br>
+
