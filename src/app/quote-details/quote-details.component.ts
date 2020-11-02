@@ -12,9 +12,9 @@ export class QuoteDetailsComponent implements OnInit {
 quoteDelete(read:boolean){
     this.isRead.emit(read);
   }
-upvote(){
-  this.quote.like+=1;
-}
+  upvote(){
+    this.quote.like+=1;
+  }
 downvote(){
   this.quote.unlike+=1;
 }
@@ -22,5 +22,4 @@ downvote(){
 
   ngOnInit(): void {
   }
-
 }
