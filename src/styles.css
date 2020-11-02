@@ -6,15 +6,18 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 p{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: large;
 }
+
 h6{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: larger; 
   font-weight: bold;
 }
+
 footer{
   text-align: center;
 }
