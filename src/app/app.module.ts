@@ -18,11 +18,13 @@ import { HighlightDirective } from './highlight.directive';
     DaysCountPipe,
     HighlightDirective
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
