@@ -15,7 +15,10 @@ export class QuoteComponent implements OnInit {
   lastNum:number
   counter:number
   
-  
+  toggleDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
+ 
 
 HighestUpvote(){
   this.preNum = 0
