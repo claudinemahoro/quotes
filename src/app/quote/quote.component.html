@@ -14,13 +14,7 @@
         <div *ngIf='quote.showDescription'>
           <app-quote-details  [quote]='quote' (isRead) = 'deleteQuote($event,i)'></app-quote-details>
         </div>
-        <!-- <div>
-          <p appHighlight *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0">{{quote.content}}</p>
-          <p  *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">{{quote.content}}</p>
-          <app-quote-details [quote]="quote" ></app-quote-details>
-        </div> -->
-
-
+       
       </div>
     </div>
     <div class="col-md-6">
