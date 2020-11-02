@@ -32,5 +32,4 @@ export class DaysCountPipe implements PipeTransform {
   }
     return value;
   }
-
 }
