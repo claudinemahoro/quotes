@@ -1,3 +1,8 @@
+# Author
+Claudine Mahoro
+## Description
+This is the page on which the user can post a quote and that vote when liked by other viewers, they can upvote it, or downvote it if disliked. The one with high upvotes will be highlighted
+
 # Quotes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
