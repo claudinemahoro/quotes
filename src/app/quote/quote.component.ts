@@ -11,7 +11,22 @@ export class QuoteComponent implements OnInit {
     new Quote('Toni Morrison','If there is a book that you want to read, but it has not been written yet, then you must write it.','Claudine',0,0,new Date(2020,10,28)),
     new Quote('Mahoro','Never make your now then,because you leave now as you live it','Coco',0,0,new Date(2020,11,2)),
   ]; 
+  preNum:number
+  lastNum:number
+  counter:number
+  
+  
 
+HighestUpvote(){
+  this.preNum = 0
+  this.lastNum = 0
+
+  for(this.counter=0 ; this.counter < this.quotes.length; this.counter++) {
+    this.lastNum = this.quotes[this.counter].like;
+    if(this.lastNum > this.preNum){this.preNum = this.lastNum}
+  }
+  return  this.preNum
+}
   constructor() { }
 
   ngOnInit(): void {
